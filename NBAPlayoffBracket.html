@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
-<head><link rel = "stylesheet" href = "NBAPlayoffBracket.css"></head>
+<html lang="en">
+<head>
+  <title>NBAPlayoffBracket</title>
+  <link rel = "stylesheet" href = "NBAPlayoffBracket.css">
+</head>
+<body>
 <div class="tournament-container">
     <div class="tournament-headers">
       <h3>Round of 16</h3>
@@ -12,34 +16,236 @@
   
     <div class="tournament-brackets">
       <ul class="bracket bracket-1">
-        <li class="team-item">A2 <time>14:00</time> C2</li>
-        <li class="team-item">D1 <time>20:00</time> 3BEF</li>
-        <li class="team-item">B1 <time>17:00</time> 3ACD</li>
-        <li class="team-item">F1 <time>20:00</time> E2</li>
-        <li class="team-item">C1 <time>17:00</time> 3ABF</li>
-        <li class="team-item">E1 <time>17:00</time> D2</li>
-        <li class="team-item">A1 <time>14:00</time> 3CDE</li>
-        <li class="team-item">B2 <time>20:00</time> F2</li>
+        <li class="team-item">
+          <select name="team" id="team">
+          <option>Milwaukee</option>
+          <option>8th Seed East</option>
+        </select>
+        <label>How many Games</label>
+        <select name="numofgames" id="numofgames">
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+
+        </select>
+      </li>
+
+        <li class="team-item">
+          <select name="team" id="team">
+            <option>Cleveland</option>
+            <option>New York</option>
+          </select>
+          <label>How many Games</label>
+          <select name="numofgames" id="numofgames">
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+          </select>
+        </li>
+        <li class="team-item"><select name="team" id="team">
+          <option>Philadelphia</option>
+          <option>Brooklyn</option>
+        </select>
+        <label>How many Games</label>
+        <select name="numofgames" id="numofgames">
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+        </select></li>
+        <li class="team-item"><select name="team" id="team">
+          <option>Boston</option>
+          <option>Atlanta Or Miami</option>
+        </select>
+        <label>How many Games</label>
+        <select name="numofgames" id="numofgames">
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+        </select></li>
+        <li class="team-item"><select name="team" id="team">
+          <option>Denver</option>
+          <option>8th Seed West</option>
+        </select>
+        <label>How many Games</label>
+        <select name="numofgames" id="numofgames">
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+
+        </select></li>
+        <li class="team-item"><select name="team" id="team">
+          <option>Phoenix</option>
+          <option>LA Clippers</option>
+        </select>
+        <label>How many Games</label>
+        <select name="numofgames" id="numofgames">
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+
+        </select></li>
+        <li class="team-item"><select name="team" id="team">
+          <option>Sacramento</option>
+          <option>Golden State</option>
+        </select>
+        <label>How many Games</label>
+        <select name="numofgames" id="numofgames">
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+
+        </select></li>
+        <li class="team-item"><select name="team" id="team">
+          <option>Memphis</option>
+          <option>LA Lakers or Minnesota</option>
+        </select>
+        <label>How many Games</label>
+        <select name="numofgames" id="numofgames">
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+
+        </select></li>
       </ul>  
       <ul class="bracket bracket-2">
-        <li class="team-item">QF1 <time>20:00</time> QF2</li>
-        <li class="team-item">QF3 <time>20:00</time> QF4</li>
-        <li class="team-item">QF5 <time>20:00</time> QF6</li>
-        <li class="team-item">QF7 <time>20:00</time> QF8</li>
+        <li class="team-item"><select name="team" id="team">
+          <option>Milwaukee</option>
+          <option>8th Seed East</option>
+          <option>Cleveland</option>
+          <option>New York</option>
+        </select>
+        <label>How many Games</label>
+        <select name="numofgames" id="numofgames">
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+        </select></li>
+        <li class="team-item"><select name="team" id="team">
+          <option>Philadelphia</option>
+          <option>Brooklyn</option>
+          <option>Boston</option>
+          <option>Atlanta Or Miami</option>
+        </select>
+        <label>How many Games</label>
+        <select name="numofgames" id="numofgames">
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+        </select></li>
+        <li class="team-item"><select name="team" id="team">
+          <label>Winner</label>
+          <option>Denver</option>
+          <option>8th Seed West</option>
+          <option>Phoenix</option>
+          <option>LA Clippers</option>
+        </select>
+        <label>How many Games</label>
+        <select name="numofgames" id="numofgames">
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+        </select></li>
+        <li class="team-item"><select name="team" id="team">
+          <option>Sacramento</option>
+          <option>Golden State</option>
+          <option>Memphis</option>
+          <option>LA Lakers or Minnesota</option>
+        </select>
+        <label>How many Games</label>
+        <select name="numofgames" id="numofgames">
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+        </select></li>
       </ul>  
       <ul class="bracket bracket-3">
-        <li class="team-item">SF1 <time>20:00</time> SF2</li>
-        <li class="team-item">SF3 <time>20:00</time> SF4</li>
+        <li class="team-item"><select name="team" id="team">
+          <option>Milwaukee</option>
+          <option>8th Seed East</option>
+          <option>Cleveland</option>
+          <option>New York</option>
+          <option>Philadelphia</option>
+          <option>Brooklyn</option>
+          <option>Boston</option>
+          <option>Atlanta Or Miami</option>
+        </select>
+        <label>How many Games</label>
+        <select name="numofgames" id="numofgames">
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+        </select></li>
+        <li class="team-item"><select name="team" id="team">
+          <option>Denver</option>
+          <option>8th Seed West</option>
+          <option>Phoenix</option>
+          <option>LA Clippers</option>
+          <option>Sacramento</option>
+          <option>Golden State</option>
+          <option>Memphis</option>
+          <option>LA Lakers or Minnesota</option>
+        </select>
+        <label>How many Games</label>
+        <select name="numofgames" id="numofgames">
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+        </select></li>
       </ul>  
       <ul class="bracket bracket-4">
-        <li class="team-item">F1 <time>20:00</time> F2</li>
+        <li class="team-item"><select name="team" id="team">
+          <option>Denver</option>
+          <option>8th Seed West</option>
+          <option>Phoenix</option>
+          <option>LA Clippers</option>
+          <option>Sacramento</option>
+          <option>Golden State</option>
+          <option>Memphis</option>
+          <option>LA Lakers or Minnesota</option>
+          <option>Milwaukee</option>
+          <option>8th Seed East</option>
+          <option>Cleveland</option>
+          <option>New York</option>
+          <option>Philadelphia</option>
+          <option>Brooklyn</option>
+          <option>Boston</option>
+          <option>Atlanta Or Miami</option>
+        </select>
+        <label>How many Games</label>
+        <select name="numofgames" id="numofgames">
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+        </select>
+      <p>
+        Tiebreaker:
+        What will be the total score of game 1 in the NBA finals:
+      </p>
+      <input>
+      </li>
+      
       </ul>  
   
-      <ul class="bracket bracket-5">
-        <li class="team-item">European Champions</li>
-      </ul>  
+      <!-- <ul class="bracket bracket-5">
+        <li class="team-item">NBA Champions</li>
+      </ul>   -->
     </div>
   </div>
 
-
+</body>
 </html>
