@@ -3,275 +3,302 @@
 <head>
   <title>NBAPlayoffBracketScore</title>
   <link rel = "stylesheet" href = "score.css">
+  <link rel ="stylesheet" href = "header.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="score.js" type="text/JavaScript"></script>
 </head>
 <body>
+  <div class="header">
+    <a href="#default" class="logo">Niv's Playoff Bracket</a>
+    <div class="header-right">
+      <a href="NBAPlayoffBracket.html">Bracket Maker</a>
+      <a href="score.html">Scores</a>
+    </div>
+    </div>
+  <div> 
+    <button onclick ="generateScore()">Generate Scores</button>
+  </div>
 <div>
   <table id="scoreTable" class="table table-bordered table-hover table-condensed">
-    <thead><tr><th title="Field #1">Player</th>
-    <th title="Field #2">E18</th>
-    <th title="Field #3">E45</th>
-    <th title="Field #4">E36</th>
-    <th title="Field #5">E27</th>
-    <th title="Field #6">W18</th>
-    <th title="Field #7">W45</th>
-    <th title="Field #8">W36</th>
-    <th title="Field #9">W27</th>
-    <th title="Field #10">ESM1</th>
-    <th title="Field #11">ESM2</th>
-    <th title="Field #12">WSM1</th>
-    <th title="Field #13">WSM2</th>
-    <th title="Field #14">EF</th>
-    <th title="Field #15">WF</th>
-    <th title="Field #16">CHMP</th>
-    <th title="Field #17">TIE</th>
-    </tr></thead>
-    <tbody><tr>
-    <td>Arjan</td>
-    <td>MIW:4</td>
-    <td>CLE:6</td>
-    <td>PHI:5</td>
-    <td>BOS:6</td>
-    <td>DEN:4</td>
-    <td>LAC:7</td>
-    <td>GSW:5</td>
-    <td>LAL:6</td>
-    <td>MIW:5</td>
-    <td>BOS:7</td>
-    <td>LAC:7</td>
-    <td>GSW:7</td>
-    <td>MIW:6</td>
-    <td>GSW:7</td>
-    <td>GSW:7</td>
-    <td align="right">211</td>
-    </tr>
-    <tr>
-    <td>James</td>
-    <td>MIW:4</td>
-    <td>CLE:6</td>
-    <td>PHI:5</td>
-    <td>BOS:6</td>
-    <td>DEN:5</td>
-    <td>PHO:6</td>
-    <td>GSW:5</td>
-    <td>MEM:6</td>
-    <td>MIW:5</td>
-    <td>BOS:6</td>
-    <td>PHO:6</td>
-    <td>GSW:6</td>
-    <td>MIW:6</td>
-    <td>GSW:6</td>
-    <td>MIW:6</td>
-    <td align="right">213</td>
-    </tr>
-    <tr>
-    <td>Joel</td>
-    <td>MIW:5</td>
-    <td>CLE:5</td>
-    <td>PHI:6</td>
-    <td>BOS:6</td>
-    <td>DEN:6</td>
-    <td>PHO:6</td>
-    <td>GSW:7</td>
-    <td>LAL:7</td>
-    <td>MIW:6</td>
-    <td>BOS:6</td>
-    <td>PHO:6</td>
-    <td>LAL:6</td>
-    <td>MIW:6</td>
-    <td>LAL:6</td>
-    <td>LAL:6</td>
-    <td align="right">197</td>
-    </tr>
-    <tr>
-    <td>JohnF</td>
-    <td>MIW:4</td>
-    <td>CLE:6</td>
-    <td>PHI:5</td>
-    <td>BOS:6</td>
-    <td>DEN:5</td>
-    <td>PHO:6</td>
-    <td>GSW:6</td>
-    <td>LAL:7</td>
-    <td>MIW:6</td>
-    <td>BOS:7</td>
-    <td>DEN:6</td>
-    <td>GSW:6</td>
-    <td>MIW:7</td>
-    <td>DEN:7</td>
-    <td>MIW:6</td>
-    <td align="right">256</td>
-    </tr>
-    <tr>
-    <td>JohnS</td>
-    <td>MIW:5</td>
-    <td>CLE:4</td>
-    <td>PHI:5</td>
-    <td>BOS:5</td>
-    <td>DEN:5</td>
-    <td>PHO:5</td>
-    <td>GSW:6</td>
-    <td>LAL:7</td>
-    <td>MIW:4</td>
-    <td>BOS:6</td>
-    <td>DEN:6</td>
-    <td>LAL:5</td>
-    <td>BOS:7</td>
-    <td>DEN:5</td>
-    <td>BOS:6</td>
-    <td align="right">207</td>
-    </tr>
-    <tr>
-    <td>Kanusan</td>
-    <td>MIW:5</td>
-    <td>CLE:6</td>
-    <td>PHI:5</td>
-    <td>BOS:5</td>
-    <td>DEN:6</td>
-    <td>PHO:5</td>
-    <td>GSW:5</td>
-    <td>MEM:7</td>
-    <td>MIW:6</td>
-    <td>BOS:6</td>
-    <td>PHO:5</td>
-    <td>GSW:6</td>
-    <td>BOS:6</td>
-    <td>PHO:7</td>
-    <td>BOS:7</td>
-    <td align="right">228</td>
-    </tr>
-    <tr>
-    <td>Mathew</td>
-    <td>MIW:4</td>
-    <td>CLE:6</td>
-    <td>PHI:4</td>
-    <td>BOS:4</td>
-    <td>DEN:5</td>
-    <td>PHO:6</td>
-    <td>GSW:6</td>
-    <td>LAL:6</td>
-    <td>MIW:6</td>
-    <td>BOS:6</td>
-    <td>PHO:6</td>
-    <td>GSW:6</td>
-    <td>MIW:7</td>
-    <td>PHO:6</td>
-    <td>MIW:7</td>
-    <td align="right">230</td>
-    </tr>
-    <tr>
-    <td>Nathan</td>
-    <td>MIW:5</td>
-    <td>CLE:6</td>
-    <td>PHI:4</td>
-    <td>BOS:5</td>
-    <td>DEN:5</td>
-    <td>PHO:5</td>
-    <td>GSW:5</td>
-    <td>LAL:6</td>
-    <td>MIW:5</td>
-    <td>BOS:6</td>
-    <td>DEN:6</td>
-    <td>GSW:6</td>
-    <td>MIW:6</td>
-    <td>DEN:6</td>
-    <td>MIW:6</td>
-    <td align="right">225</td>
-    </tr>
-    <tr>
-    <td>Niv</td>
-    <td>MIW:4</td>
-    <td>CLE:6</td>
-    <td>PHI:4</td>
-    <td>BOS:4</td>
-    <td>DEN:5</td>
-    <td>PHO:6</td>
-    <td>GSW:6</td>
-    <td>LAL:6</td>
-    <td>MIW:6</td>
-    <td>BOS:6</td>
-    <td>PHO:6</td>
-    <td>GSW:6</td>
-    <td>MIW:7</td>
-    <td>PHO:6</td>
-    <td>MIW:6</td>
-    <td align="right">229</td>
-    </tr>
-    <tr>
-    <td>Raki</td>
-    <td>MIW:4</td>
-    <td>CLE:5</td>
-    <td>PHI:4</td>
-    <td>BOS:5</td>
-    <td>DEN:6</td>
-    <td>LAC:7</td>
-    <td>GSW:5</td>
-    <td>MEM:6</td>
-    <td>MIW:5</td>
-    <td>BOS:7</td>
-    <td>LAC:7</td>
-    <td>GSW:6</td>
-    <td>BOS:7</td>
-    <td>LAC:6</td>
-    <td>BOS:7</td>
-    <td align="right">186</td>
-    </tr>
-    <tr>
-    <td>Sheldon</td>
-    <td>MIW:4</td>
-    <td>NYK:6</td>
-    <td>PHI:4</td>
-    <td>BOS:6</td>
-    <td>DEN:4</td>
-    <td>PHO:7</td>
-    <td>GSW:5</td>
-    <td>LAL:7</td>
-    <td>MIW:5</td>
-    <td>BOS:6</td>
-    <td>PHO:5</td>
-    <td>GSW:4</td>
-    <td>MIW:5</td>
-    <td>PHO:6</td>
-    <td>PHO:6</td>
-    <td align="right">223</td>
-    </tr>
-    <tr>
-    <td>VK</td>
-    <td>MIW:6</td>
-    <td>CLE:6</td>
-    <td>PHI:5</td>
-    <td>BOS:6</td>
-    <td>WS8:6</td>
-    <td>LAC:7</td>
-    <td>GSW:6</td>
-    <td>LAL:6</td>
-    <td>MIW:6</td>
-    <td>PHI:6</td>
-    <td>LAC:6</td>
-    <td>GSW:6</td>
-    <td>MIW:6</td>
-    <td>GSW:6</td>
-    <td>GSW:6</td>
-    <td align="right">246</td>
-    </tr>
-    <tr>
-    <td>Conrad</td>
-    <td>MIW:4</td>
-    <td>CLE:6</td>
-    <td>PHI:5</td>
-    <td>BOS:4</td>
-    <td>DEN:5</td>
-    <td>PHO:6</td>
-    <td>GSW:6</td>
-    <td>LAL:6</td>
-    <td>MIW:5</td>
-    <td>PHI:6</td>
-    <td>DEN:7</td>
-    <td>LAL:6</td>
-    <td>PHI:6</td>
-    <td>LAL:6</td>
-    <td>LAL:5</td>
-    <td align="right">217</td>
-    </tr>
+      <thead><tr><th title="Field #1">Player</th>
+      <th title="Field #2">CURRENT SCORE</th>
+      <th title="Field #3">E18</th>
+      <th title="Field #4">E45</th>
+      <th title="Field #5">E36</th>
+      <th title="Field #6">E27</th>
+      <th title="Field #7">W18</th>
+      <th title="Field #8">W45</th>
+      <th title="Field #9">W36</th>
+      <th title="Field #10">W27</th>
+      <th title="Field #11">ESM1</th>
+      <th title="Field #12">ESM2</th>
+      <th title="Field #13">WSM1</th>
+      <th title="Field #14">WSM2</th>
+      <th title="Field #15">EF</th>
+      <th title="Field #16">WF</th>
+      <th title="Field #17">CHMP</th>
+      <th title="Field #18">TIE</th>
+      </tr></thead>
+      <tbody><tr>
+      <td>Arjan</td>
+      <td> </td>
+      <td>MIW:4</td>
+      <td>CLE:6</td>
+      <td>PHI:5</td>
+      <td>BOS:6</td>
+      <td>DEN:4</td>
+      <td>LAC:7</td>
+      <td>GSW:5</td>
+      <td>LAL:6</td>
+      <td>MIW:5</td>
+      <td>BOS:7</td>
+      <td>LAC:6</td>
+      <td>GSW:7</td>
+      <td>MIW:6</td>
+      <td>GSW:7</td>
+      <td>GSW:7</td>
+      <td align="right">211</td>
+      </tr>
+      <tr>
+      <td>James</td>
+      <td> </td>
+      <td>MIW:4</td>
+      <td>CLE:6</td>
+      <td>PHI:5</td>
+      <td>BOS:6</td>
+      <td>DEN:5</td>
+      <td>PHO:6</td>
+      <td>GSW:5</td>
+      <td>MEM:6</td>
+      <td>MIW:5</td>
+      <td>BOS:6</td>
+      <td>PHO:6</td>
+      <td>GSW:6</td>
+      <td>MIW:6</td>
+      <td>GSW:6</td>
+      <td>MIW:6</td>
+      <td align="right">213</td>
+      </tr>
+      <tr>
+      <td>Joel</td>
+      <td> </td>
+      <td>MIW:5</td>
+      <td>CLE:5</td>
+      <td>PHI:6</td>
+      <td>BOS:6</td>
+      <td>DEN:6</td>
+      <td>PHO:6</td>
+      <td>GSW:7</td>
+      <td>LAL:7</td>
+      <td>MIW:6</td>
+      <td>BOS:6</td>
+      <td>PHO:6</td>
+      <td>LAL:6</td>
+      <td>MIW:6</td>
+      <td>LAL:6</td>
+      <td>LAL:6</td>
+      <td align="right">197</td>
+      </tr>
+      <tr>
+      <td>JohnF</td>
+      <td> </td>
+      <td>MIW:4</td>
+      <td>CLE:6</td>
+      <td>PHI:5</td>
+      <td>BOS:6</td>
+      <td>DEN:5</td>
+      <td>PHO:6</td>
+      <td>GSW:6</td>
+      <td>LAL:7</td>
+      <td>MIW:6</td>
+      <td>BOS:7</td>
+      <td>DEN:6</td>
+      <td>GSW:6</td>
+      <td>MIW:7</td>
+      <td>DEN:7</td>
+      <td>MIW:6</td>
+      <td align="right">256</td>
+      </tr>
+      <tr>
+      <td>JohnS</td>
+      <td> </td>
+      <td>MIW:5</td>
+      <td>CLE:4</td>
+      <td>PHI:5</td>
+      <td>BOS:5</td>
+      <td>DEN:5</td>
+      <td>PHO:5</td>
+      <td>GSW:6</td>
+      <td>LAL:7</td>
+      <td>MIW:4</td>
+      <td>BOS:6</td>
+      <td>DEN:6</td>
+      <td>LAL:5</td>
+      <td>BOS:7</td>
+      <td>DEN:5</td>
+      <td>BOS:6</td>
+      <td align="right">207</td>
+      </tr>
+      <tr>
+      <td>Kanusan</td>
+      <td> </td>
+      <td>MIW:5</td>
+      <td>CLE:6</td>
+      <td>PHI:5</td>
+      <td>BOS:5</td>
+      <td>DEN:6</td>
+      <td>PHO:5</td>
+      <td>GSW:5</td>
+      <td>MEM:7</td>
+      <td>MIW:6</td>
+      <td>BOS:6</td>
+      <td>PHO:5</td>
+      <td>GSW:6</td>
+      <td>BOS:6</td>
+      <td>PHO:7</td>
+      <td>BOS:7</td>
+      <td align="right">228</td>
+      </tr>
+      <tr>
+      <td>Mathew</td>
+      <td> </td>
+      <td>MIW:4</td>
+      <td>CLE:6</td>
+      <td>PHI:4</td>
+      <td>BOS:4</td>
+      <td>DEN:5</td>
+      <td>PHO:6</td>
+      <td>GSW:6</td>
+      <td>LAL:6</td>
+      <td>MIW:6</td>
+      <td>BOS:6</td>
+      <td>PHO:6</td>
+      <td>GSW:6</td>
+      <td>MIW:7</td>
+      <td>PHO:6</td>
+      <td>MIW:7</td>
+      <td align="right">230</td>
+      </tr>
+      <tr>
+      <td>Nathan</td>
+      <td> </td>
+      <td>MIW:5</td>
+      <td>CLE:6</td>
+      <td>PHI:4</td>
+      <td>BOS:5</td>
+      <td>DEN:5</td>
+      <td>PHO:5</td>
+      <td>GSW:5</td>
+      <td>LAL:6</td>
+      <td>MIW:5</td>
+      <td>BOS:6</td>
+      <td>DEN:6</td>
+      <td>GSW:6</td>
+      <td>MIW:6</td>
+      <td>DEN:6</td>
+      <td>MIW:6</td>
+      <td align="right">225</td>
+      </tr>
+      <tr>
+      <td>Niv</td>
+      <td> </td>
+      <td>MIW:4</td>
+      <td>CLE:6</td>
+      <td>PHI:4</td>
+      <td>BOS:4</td>
+      <td>DEN:5</td>
+      <td>PHO:6</td>
+      <td>GSW:6</td>
+      <td>LAL:6</td>
+      <td>MIW:6</td>
+      <td>BOS:6</td>
+      <td>PHO:6</td>
+      <td>GSW:6</td>
+      <td>MIW:7</td>
+      <td>PHO:6</td>
+      <td>MIW:6</td>
+      <td align="right">229</td>
+      </tr>
+      <tr>
+      <td>Raki</td>
+      <td> </td>
+      <td>MIW:4</td>
+      <td>CLE:5</td>
+      <td>PHI:4</td>
+      <td>BOS:5</td>
+      <td>DEN:6</td>
+      <td>LAC:7</td>
+      <td>GSW:5</td>
+      <td>MEM:6</td>
+      <td>MIW:5</td>
+      <td>BOS:7</td>
+      <td>LAC:7</td>
+      <td>GSW:6</td>
+      <td>BOS:7</td>
+      <td>LAC:6</td>
+      <td>BOS:7</td>
+      <td align="right">186</td>
+      </tr>
+      <tr>
+      <td>Sheldon</td>
+      <td> </td>
+      <td>MIW:4</td>
+      <td>NYK:6</td>
+      <td>PHI:4</td>
+      <td>BOS:6</td>
+      <td>DEN:4</td>
+      <td>PHO:7</td>
+      <td>GSW:5</td>
+      <td>LAL:7</td>
+      <td>MIW:5</td>
+      <td>BOS:6</td>
+      <td>PHO:5</td>
+      <td>GSW:4</td>
+      <td>MIW:5</td>
+      <td>PHO:6</td>
+      <td>PHO:6</td>
+      <td align="right">223</td>
+      </tr>
+      <tr>
+      <td>VK</td>
+      <td> </td>
+      <td>MIW:6</td>
+      <td>CLE:6</td>
+      <td>PHI:5</td>
+      <td>BOS:6</td>
+      <td>WS8:6</td>
+      <td>LAC:7</td>
+      <td>GSW:6</td>
+      <td>LAL:6</td>
+      <td>MIW:6</td>
+      <td>PHI:6</td>
+      <td>LAC:6</td>
+      <td>GSW:6</td>
+      <td>MIW:6</td>
+      <td>GSW:6</td>
+      <td>GSW:6</td>
+      <td align="right">246</td>
+      </tr>
+      <tr>
+      <td>Conrad</td>
+      <td> </td>
+      <td>MIW:4</td>
+      <td>CLE:6</td>
+      <td>PHI:5</td>
+      <td>BOS:4</td>
+      <td>DEN:5</td>
+      <td>PHO:6</td>
+      <td>GSW:6</td>
+      <td>LAL:6</td>
+      <td>MIW:5</td>
+      <td>PHI:6</td>
+      <td>DEN:7</td>
+      <td>LAL:6</td>
+      <td>PHI:6</td>
+      <td>LAL:6</td>
+      <td>LAL:5</td>
+      <td align="right">217</td>
+      </tr>
     </tbody></table>
 </div>
 
