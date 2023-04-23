@@ -1,7 +1,7 @@
 let MAX_NUM_TEAMS = 13
 
-let CORRECTTEAMS = ["MIW", "CLE", "DEN"]
-let CORRECTSERIES = [4, 5, 7, 5]
+let CORRECTTEAMS = ["", "", "PHI"]
+let CORRECTSERIES = [0, 0, 4]
 
 
 
