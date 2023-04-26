@@ -74,7 +74,6 @@ function compareSeries(correctScores, playerSeries){
     for (let i = 0; i < correctScores.length; i++){
         var delta = Math.abs(correctScores[i] - parseInt(playerSeries[i]))
 
-
         switch (delta) {
             case 0:
                 playerTally +=5
