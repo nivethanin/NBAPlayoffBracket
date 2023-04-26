@@ -83,10 +83,10 @@ function compareSeries(correctScores, playerSeries){
                 playerTally +=3
                 break;
             case 2:
-                playerTally +=2
+                playerTally +=1
                 break;
             case 3:
-                playerTally +=1
+                playerTally +=0
                 break;
         
             default:
