@@ -1,7 +1,7 @@
 let MAX_NUM_TEAMS = 13
 
-let CORRECTTEAMS = ["", "", "PHI"]
-let CORRECTSERIES = [0, 0, 4]
+let CORRECTTEAMS = ["", "", "PHI","","DEN","PHO"]
+let CORRECTSERIES = [0, 0, 4, 0, 5, 5]
 
 
 
@@ -45,17 +45,11 @@ function parseData(rawData){
     let playerTeams = []
 
     for(var i = 0; i<rawData.length; i++){
-        
-    //    var  arr = r.split(',')
-
-    //    for(var j in arr){
 
         var pPicks = rawData[i].split(':')
 
         playerTeams.push(pPicks[0])
         playerSeries.push(pPicks[1])
-
-    //    }
         
     }
     return [playerTeams, playerSeries]
@@ -65,8 +59,10 @@ function parseData(rawData){
 function compareTeams(correctTeams, playerTeams){
     let teamScores = 0
     for(let i=0; i<correctTeams.length; i++){
+
         if (correctTeams[i] === playerTeams[i])
             teamScores += 5
+
     }
 
     return teamScores
