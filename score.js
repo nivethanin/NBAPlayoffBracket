@@ -1,7 +1,7 @@
 let MAX_NUM_TEAMS = 13
 
-let CORRECTTEAMS = ["", "NYK", "PHI","","DEN","PHO"]
-let CORRECTSERIES = [0, 5, 4, 0, 5, 5]
+let CORRECTTEAMS = ["MIW", "NYK", "PHI","","DEN","PHO"]
+let CORRECTSERIES = [5, 5, 4, 0, 5, 5]
 
 
 function generateScore(){
