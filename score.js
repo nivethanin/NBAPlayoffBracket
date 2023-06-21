@@ -1,7 +1,7 @@
 let MAX_NUM_TEAMS = 13
 
-let CORRECTTEAMS = ["ES8", "NYK", "PHI","BOS","DEN","PHO","GSW","LAL","ES8","BOS","DEN","LAL", "ES8", "DEN"]
-let CORRECTSERIES = [5, 5, 4, 6, 5, 5, 7, 6,                              6,    7,    6,    6,    7,    4]
+let CORRECTTEAMS = ["ES8", "NYK", "PHI","BOS","DEN","PHO","GSW","LAL","ES8","BOS","DEN","LAL", "ES8", "DEN", ""]
+let CORRECTSERIES = [5, 5, 4, 6, 5, 5, 7, 6,                              6,    7,    6,    6,    7,    4, 0]
 
 
 function generateScore(){
@@ -91,4 +91,16 @@ function compareSeries(correctScores, playerSeries){
 
     }
     return playerTally
+}
+
+function checkAnswer(){
+    let response = document.getElementById("textArea").value;
+
+    if (response == "2CD0C2CE"){
+        $("#ShreyaResult").text("YAY YOU GOT IT! LOVE YOU")
+    }
+    else{
+        $("#ShreyaResult").text("That ain't it chief!")
+    }
+
 }
