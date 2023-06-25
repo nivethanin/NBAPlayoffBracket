@@ -108,7 +108,7 @@ function checkAnswer(){
 }
 
 function checkSusan(){
-    let response = document.getElementById("susan").value;
+    let response = document.getElementById("susanInput").value;
 
     if (response == "susan"){
         $("#SusanResult").text("See! Was it so hard to finally admit the truth?")
