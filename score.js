@@ -96,11 +96,26 @@ function compareSeries(correctScores, playerSeries){
 function checkAnswer(){
     let response = document.getElementById("textArea").value;
 
-    if (response == "2CD0C2CE"){
-        $("#ShreyaResult").text("YAY YOU GOT IT! LOVE YOU")
+    if (response == "351"){
+        $("#ShreyaResult").text("YESSIRRRRRR! Now answer the puzzle below!")
+        $("#susan").toggle()
+
     }
     else{
         $("#ShreyaResult").text("That ain't it chief!")
+    }
+
+}
+
+function checkSusan(){
+    let response = document.getElementById("susan").value;
+
+    if (response == "susan"){
+        $("#SusanResult").text("See! Was it so hard to finally admit the truth?")
+        
+    }
+    else{
+        $("#SusanResult").text("NO! C'mon you know it deep down. All lowercase!")
     }
 
 }
